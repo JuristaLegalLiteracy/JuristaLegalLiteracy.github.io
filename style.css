@@ -1,22 +1,36 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: system-ui, sans-serif;
-    background: #f5f5f5;
+    background: #f4f4f4;
     color: #222;
     line-height: 1.6;
 }
 
 /* Header */
-.site-header {
+.header {
     background: #111;
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
+}
+
+.header nav {
+    margin-top: 0.5rem;
+}
+
+.header a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 0.8rem;
+}
+
+.header a:hover {
+    color: white;
 }
 
 /* Layout */
@@ -26,26 +40,44 @@ body {
     padding: 0 1rem;
 }
 
-/* Posts */
-.post {
-    background: white;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 6px;
+section {
+    margin-bottom: 3rem;
 }
 
-.post h2 {
-    margin-bottom: 0.3rem;
+h2 {
+    margin-bottom: 1rem;
+}
+
+/* Blog posts */
+.post {
+    background: white;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-radius: 6px;
 }
 
 .date {
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Donate */
+.donate-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.donate-btn:hover {
+    background: #333;
 }
 
 /* Footer */
-.site-footer {
+.footer {
     text-align: center;
     padding: 1rem;
     color: #666;
