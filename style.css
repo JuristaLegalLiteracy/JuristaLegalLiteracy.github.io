@@ -35,13 +35,13 @@ transition: color 0.3s ease, transform 0.2s ease;
 .hero {
     display: flex;
     min-height: calc(100vh - 70px);
-    flex-direction: column;
+    flex-direction: row;
 }
 
 /* Mobile */
 @media (max-width: 900px) {
     .hero {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
@@ -147,6 +147,15 @@ transition: color 0.3s ease, transform 0.2s ease;
     transform: translateY(-2px);
 }
 
+/* Active page highlight */
+.menu.active {
+    color: #123b5a;
+    font-weight: 600;
+}
+
+.menu.active::after {
+    width: 100%;
+}
 
 
 
