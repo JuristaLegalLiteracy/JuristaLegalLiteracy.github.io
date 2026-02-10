@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate</title>
+    <title>Donate | Know Your Rights</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
     <div class="logo">
-    <a href="index.html">
-        <img src="Screenshot 2026-01-03 173539.png" alt="Know Your Rights Logo">
-    </a>
+        <a href="index.html">
+            <img src="Screenshot 2026-01-03 173539.png" alt="Know Your Rights Logo">
+        </a>
     </div>
 
     <div class="nav-links">
@@ -24,15 +24,60 @@
     </div>
 </header>
 
-<main class="container">
-    <!-- Add donation info here -->
+<main class="container donate-page">
+
+    <section class="donate-card reveal">
+        <h1>Support Us 💛 <span class="beta">[BETA]</span></h1>
+
+        <p class="donate-intro">
+            We are currently in the <strong>beta phase of donations</strong>.
+            This means we’re testing our support system while keeping things
+            simple, transparent, and secure.
+        </p>
+
+        <p class="donate-note">
+            Your contribution helps us continue spreading legal awareness
+            and making rights easier to understand for everyone.
+        </p>
+
+        <div class="donate-box">
+            <img src="d8c8ad36-91db-4201-86b1-dbc1693ecaa0.png" alt="FamPay QR Code">
+
+            <div class="donate-details">
+                <p><strong>Scan to pay using any UPI app</strong></p>
+                <p class="upi-id">
+                    FamPay ID:<br>
+                    <span>9606954819@fam</span>
+                </p>
+            </div>
+        </div>
+
+        <p class="donate-footer">
+            If you face any issues or have questions, feel free to
+            <a href="contact.html">contact us</a>.
+        </p>
+    </section>
+
 </main>
+
+<!-- Scroll animation script -->
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    },
+    { threshold: 0.15 }
+);
+
+reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
-
-
-
-
-
 
