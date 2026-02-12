@@ -517,6 +517,11 @@ body {
     visibility: hidden;
 }
 
+/* Disable scroll when loading */
+body.loading {
+    overflow: hidden;
+}
+
 .spinner {
     width: 48px;
     height: 48px;
@@ -531,4 +536,5 @@ body {
         transform: rotate(360deg);
     }
 }
+
 
