@@ -612,3 +612,27 @@ section h2 {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Deepens the shadow */
 }
 
+/* ===== Team Preview (Homepage) ===== */
+
+.team-preview {
+    text-align: center;
+}
+
+.team-preview-grid {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-preview-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.team-preview-link {
+    margin-top: 1.5rem;
+}
