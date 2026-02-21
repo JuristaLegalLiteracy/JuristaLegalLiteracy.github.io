@@ -9,7 +9,7 @@
 <body>
 <header class="nav">
     <div class="logo">
-    <a href="./">
+    <a href="index.html">
         <img src="Screenshot 2026-01-03 173539.png" alt="Know Your Rights Logo">
     </a>
     </div>
@@ -56,51 +56,8 @@ menuLinks.forEach(link => {
     }
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const reveals = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target); // prevents re-trigger bugs
-                }
-            });
-        },
-        { threshold: 0.15 }
-    );
-
-    reveals.forEach(el => observer.observe(el));
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const reveals = document.querySelectorAll(".reveal");
-
-    if (!reveals.length) return;
-
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.15 }
-    );
-
-    reveals.forEach(el => observer.observe(el));
-});
-</script>
 </body>
 </html>
-
-
-
 
 
 

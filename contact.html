@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="nav">
     <div class="logo">
     <a href="index.html">
@@ -16,11 +15,11 @@
     </div>
 
     <div class="nav-links">
-        <a class="menu" href="index.html">Home</a>
-        <a class="menu" href="index.html#about">About us</a>
-        <a class="menu" href="index.html#articles">Articles</a>
-        <a class="menu" href="donate.html">Donate</a>
-        <a class="menu active" href="contact.html">Contact</a>
+        <a class="menu" href="./">Home</a>
+        <a class="menu" href="./#about">About us</a>
+        <a class="menu" href="./#articles">Articles</a>
+        <a class="menu" href="donate">Donate</a>
+        <a class="menu" href="contact">Contact</a>
     </div>
 </header>
 
@@ -48,10 +47,8 @@
                 </p>
             </div>
         </div>
-        <form class="contact-form reveal-right"
-  action="https://formspree.io/f/xwvnvkkp"
-  method="POST"
->
+    <form class="contact-form reveal-right" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="2f87b13d-d5aa-4bb9-b3ff-b542b8de0b8d">
  <label>
     Your Name:
     <input type="name" name="name" placeholder="Enter your name" required><br><br>
@@ -68,10 +65,66 @@
   <p class="form-footnote">
     We respect your privacy. Your details are never shared.
   </p>
+  <input type="hidden" name="redirect" value="https://knowyourrightslegalliteracyawareness.github.io/legal-literacy/thank-you">
 </form>
   </div>
+<script>
+const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    },
+    { threshold: 0.1 }
+);
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+<script>
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector(".nav");
+
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        navbar.classList.add("nav-hidden");
+    } else {
+        navbar.classList.remove("nav-hidden");
+    }
+    lastScrollY = currentScrollY;
+});
+</script>
+<script>
+const menuLinks = document.querySelectorAll(".nav-links .menu");
+const currentPath = window.location.pathname.split("/").pop();
+
+menuLinks.forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPath) {
+        link.classList.add("active");
+    }
+});
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
