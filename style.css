@@ -499,3 +499,17 @@ body {
 .btn-see-all:hover {
     background-color: #2a5a7a;
 }
+
+/* ===== Page Fade Transitions ===== */
+body {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+body.page-exit {
+    opacity: 0;
+}
