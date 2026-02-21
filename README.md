@@ -1,2 +1,2 @@
-# Jurista Legal Literacy and Awareness
+# legal-literacy
 legal literacy Website
