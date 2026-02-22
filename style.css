@@ -26,7 +26,7 @@ body {
 }
 
 .logo img {
-    height: 40px; /* Adjust this value (e.g., 30px to 60px) to find the perfect size */
+    height: 120px; /* Adjust this value (e.g., 30px to 60px) to find the perfect size */
     width: auto;  /* This ensures the logo doesn't look squished */
     display: block;
 }
@@ -638,4 +638,5 @@ section h2 {
 .team-preview-link {
     margin-top: 1.5rem;
 }
+
 
